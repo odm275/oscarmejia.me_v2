@@ -1,10 +1,31 @@
 module.exports = {
-  siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-  },
   plugins: [
+    {
+      resolve: `@lekoarts/gatsby-theme-minimal-blog`,
+      options: {
+        showLineNumbers: false,
+        navigation: [
+          {
+            title: `Blog`,
+            slug: `/blog`,
+          },
+          {
+            title: `About`,
+            slug: `/about`,
+          },
+        ],
+        externalLinks: [
+          {
+            name: `Twitter`,
+            url: `https://twitter.com/lekoarts_de`,
+          },
+          {
+            name: `Instagram`,
+            url: `https://www.instagram.com/lekoarts.de/`,
+          },
+        ],
+      },
+    }, 
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
